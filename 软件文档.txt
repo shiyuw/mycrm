@@ -1,0 +1,55 @@
+客户信息填写页面
+——————————————
+订单号:order
+客户QQ号:QQ
+购买时间:fromdate
+截止时间:todate
+付款金额:cost
+购买产品:production
+备注:decription
+域名:domain
+主机账号:hostid
+———————————————————
+数据库设计  数据库名称crm 表名称 info
+———————————————————
+order varchar 10
+qq  int 11
+fromdate  date
+todate  date
+cost  double  
+production  varchar  60
+domain  varchar 255
+hostid  varchar 10
+decription text
+name varchar 50
+————————————————
+功能性描述
+————————————————
+实现信息注册
+过期信息删除
+60天到70天追销
+检测过期帐户
+信息修改
+************************
+显示页面功能性描述：
+删除信息，删除过期信息或无用信息
+查询信息：按订单号查询，按昵称查询，按主机帐户查询，按域名查询
+显示信息：
+购买60天到70天的用户
+到期用户，超过截止日期的用户
+************************
+类库说明：
+actionlib.php文件
+datebase类
+方法：
+Connection() 连接数据库，返回一个连接值
+CommonSelection($order,$domain,$hostid)普通查询，针对订单号，域名，和主机帐号的查询。参数依次为订单号，域名，主机帐号。返回数据集
+OutDeadtime() 识别过期用户，返回数据集
+Marketing() 识别购买60天到70天的用户用于追销，返回数据集
+Close() 关闭打开的数据库连接，返回字符串
+——————————————————————
+action.php文件
+函数说明：
+string ToDate($out);生成过期用户的表格，参数是OutDeadtime()方法处理后的结果集，返回html代码
+string marketing($market);生成追销客户的表格，参数是Marketing()方法处理后的结果集，返回html代码
+

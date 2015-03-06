@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>客户信息管理</title>
+<link href="style2.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="jquery-2.0.0.jsz/jquery-2.0.0.min.js">
+</script>
+
+<script language="javascript" type="text/javascript" src="js/info.js">
+</script>
+</head>
+<body>
+<div id="content">
+	<h1>客户信息填写</h1>
+	<!--表单样式-->
+	<div id="form">
+		<form id="form1" action="reginfo.php" method="post">
+		<div id="order">
+			<div class="text">
+				<div class="inner"><label><font color="#FF0000">*</font>订单号：</label></div>
+				<div class="input"><input type="text" name="order"/></div>
+			</div>
+			<div class="guide">请输入正确的订单号！</div>
+		</div>
+		<div id="domain">
+			<div class="text">
+				<div class="inner"><label><font color="#FF0000">*</font>域名：</label></div>
+				<div class="input"><input type="text" name="domain"/></div>
+			</div>
+			<div class="guide">请输入正确的域名！</div>
+		</div>
+		<div id="hostid">
+			<div class="text">
+				<div class="inner"><label><font color="#FF0000">*</font>主机帐号：</label></div>
+				<div class="input"><input type="text" name="hostid"/></div>
+			</div>
+			<div class="guide">请输入正确的主机帐号！</div>
+		</div>
+		<div id="contact">
+			<div class="text">
+				<div class="inner"><label><font color="#FF0000">*</font>客户昵称：</label></div>
+				<div class="input"><input type="text" name="name"/></div>
+			</div>
+			<div class="text">
+				<div class="inner"><label><font color="#FF0000">*</font>客户QQ号：</label></div>
+				<div class="input"><input type="text" name="qq"/></div>
+			</div>
+			<div class="guide">请输入正确的QQ号！</div>
+		</div>
+		<div id="email">
+			<div class="text">
+				<div class="inner"><label><font color="#FF0000">*</font>客户邮件：</label></div>
+				<div class="input"><input type="text" name="email"/></div>
+			</div>
+			<div class="guide">请输入付款金额！</div>
+		</div>
+		<div id="cost">
+			<div class="text">
+				<div class="inner"><label><font color="#FF0000">*</font>付款金额：</label></div>
+				<div class="input"><input type="text" name="cost"/></div>
+			</div>
+			<div class="guide">请输入付款金额！</div>
+		</div>
+		<div id="fromdate">
+			<div class="text">
+				<div class="inner"><label><font color="#FF0000">*</font>购买时间：</label></div>
+				<div class="input"><input type="text" name="fromdate"/></div>
+			</div>
+			<div class="guide">请按正确格式输入时间<br/>xxxx-xx-xx！</div>
+		</div>
+		<div id="todate">
+			<div class="text">
+				<div class="inner"><label><font color="#FF0000">*</font>截止日期：</label></div>
+				<div class="input"><input type="text" name="todate"/></div>
+			</div>
+			<div class="guide">请按正确格式输入时间<br/>xxxx-xx-xx！</div>
+		</div>
+		<div id="production">
+			<div class="text">
+				<div class="inner"><label><font color="#FF0000">*</font>购买产品：</label></div>
+				<div class="input"><input type="text" name="production"/></div>
+			</div>
+			<div class="guide">请输入购买产品！</div>
+		</div>
+		<div id="decription">
+			<div class="inner"><label>备注：</label></div>
+			<div class="textarea"><textarea rows="30" cols="60" name="decription"></textarea></div>
+		</div>
+		<div class="input"><input type="button" value="确认" id="button"/></div>
+		<div class="input"><input type="submit" value="提交" id="submit"/></div>
+		</form>
+	</div>
+</div>
+</body>
+</html>
